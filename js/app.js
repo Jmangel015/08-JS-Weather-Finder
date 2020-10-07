@@ -55,7 +55,11 @@ function mostrarError(mensaje) {
 function consultarApi(ciudad, pais) {
   const appId = 'b979089fc98fd2853ee9ec65a4fc42af';
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
+  const urlClima = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
+
+  const url = `https://api.allorigins.win/get?url=${encodeURIComponent(
+    urlClima
+  )}`;
 
   Spinner();
   fetch(url)
@@ -128,7 +132,7 @@ function Spinner() {
   <div class="sk-circle4 sk-circle"></div>
   <div class="sk-circle5 sk-circle"></div>
   <div class="sk-circle6 sk-circle"></div>
-  <div class="sk-circle7 sk-circle"></div>
+  <div class="sk-circle7 sk-circle"><div>
   <div class="sk-circle8 sk-circle"></div>
   <div class="sk-circle99 sk-circle"></div>
   <div class="sk-circle10 sk-circle"></div>
